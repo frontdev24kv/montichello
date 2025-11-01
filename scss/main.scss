@@ -1,3 +1,20 @@
 @use 'reset';
 @use 'fonts';
 @use 'vars' as v;
+@use 'mixin' as m;
+@use 'header';
+@use 'hero';
+
+body {
+  font-family: v.$font-family;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+
+.container {
+  margin: 0 auto;
+  max-width: v.$container-width;
+  padding: 0 15px;
+}

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Source+Code+Pro:ital,wght@0,200..900;1,200..900&display=swap");
 /* Reset and base styles  */
 * {
   padding: 0px;
@@ -108,4 +109,80 @@ legend {
 
 input[type=file] {
   max-width: 100%;
+}
+
+.header {
+  background: linear-gradient(207deg, rgb(126, 90, 255) 0%, rgba(85, 183, 255, 0.99) 100%);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 53px;
+}
+.header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav {
+  max-width: 515px;
+  width: 100%;
+}
+.nav__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.nav__link {
+  font-family: "Source Code Pro", monospace;
+  font-size: 14px;
+  color: #fff;
+  position: relative;
+}
+.nav__link::before {
+  content: "";
+  position: absolute;
+  width: 9px;
+  height: 9px;
+  left: -20px;
+  top: 5px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+  background-color: transparent;
+  transition: all 0.3s;
+}
+.nav__link:hover::before {
+  background-color: #fff;
+}
+
+.socials {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  gap: 20px;
+}
+.socials__link:hover .icon {
+  transform: scale(1.05);
+  color: #00ff88;
+}
+
+.icon {
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  transition: all 0.3s ease;
+  color: #fff;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  color: #fff;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 15px;
 }/*# sourceMappingURL=main.css.map */
