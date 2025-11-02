@@ -9,10 +9,13 @@ const dotButtons = document.querySelectorAll('.dot');
 const parent = document.getElementById('parent')
 
 parent.addEventListener('click', (e) => {
+  console.log(e.target.tagName);
+  // if(e.target.tagName !== 'BUTTON') return
   // if(e.target.classList.contains('active')){
   //    e.target.classList.remove('active')
   //    return
   // }
+  
   dotButtons.forEach(btn => btn.classList.remove('active'))
    e.target.classList.add('active')
 })

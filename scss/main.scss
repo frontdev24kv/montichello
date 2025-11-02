@@ -4,17 +4,31 @@
 @use 'mixin' as m;
 @use 'header';
 @use 'hero';
+@use 'section';
+
 
 body {
   font-family: v.$font-family;
   font-size: 18px;
   font-weight: 400;
   color: #fff;
+  background-color: #fff;
 }
 
+.wrapper {
+  max-width: 1600px;
+  margin: 0 auto;
+  position: relative;
+}
 
 .container {
   margin: 0 auto;
   max-width: v.$container-width;
   padding: 0 15px;
+}
+
+@media screen  and (max-width: 1300px){
+  .wrapper {
+    overflow: hidden;;
+  }
 }
