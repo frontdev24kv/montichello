@@ -1,0 +1,87 @@
+@use 'vars' as v;
+@use 'mixin' as m;
+
+.cards {
+  background: linear-gradient(
+    213deg,
+    rgba(36, 204, 250, 1) 0%,
+    rgba(60, 127, 212, 0.99) 100%
+  );
+  height: 978px;
+}
+
+.title_2_white {
+  font-weight: 700;
+  font-size: 44px;
+  text-align: center;
+  position: relative;
+  padding-top: 150px;
+  margin-bottom: 90px;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 1px;
+    background-color: #fff;
+    top: 120px;
+  }
+}
+
+.card {
+  background-color: #fff;
+  color: v.$main-color;
+  max-height: 514px;
+  padding-bottom: 30px;
+  &__image {
+    height: 100%;
+    max-height: 240px;
+    object-fit: cover;
+    margin-bottom: 30px;
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 22px;
+    max-width: 330px;
+    margin-bottom: 15px;
+    padding: 0 20px;
+  }
+
+  &__text {
+    font-family: v.$third-family;
+    padding-left: 20px;
+    font-size: 17px;
+    max-width: 330px;
+    margin-bottom: 39px;
+  }
+
+  &__bottom {
+    padding: 0 20px;
+    @include m.flex();
+    gap: 20px;
+
+    &_photo {
+      width: 60px;
+      height: 60px;
+      border: none;
+      border-radius: 50%;
+      overflow: hidden;
+    }
+
+    &_info {
+      padding-top: 7px;
+
+      & .name {
+        margin-bottom: 6px;
+      }
+
+      & .data {
+        font-size: 14px;
+        color: #55b7ff;
+      }
+    }
+  }
+}
