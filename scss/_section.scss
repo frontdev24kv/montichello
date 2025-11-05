@@ -78,8 +78,10 @@
   color: #000;
   padding: 16px 41px;
   border: 1px solid v.$main-color;
-  margin-bottom: 60px;
+  // margin-bottom: 60px;
   transition: all 0.3s linear;
+  display: block;
+  margin: 0 auto 60px;
 
   &:hover {
     transform: scale(1.1);

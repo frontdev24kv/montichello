@@ -45,29 +45,16 @@
   letter-spacing: 0.3rem;
 }
 
-.dots {
+.arrow_btn {
   position: absolute;
-  @include m.flex();
-  flex-direction: column;
-  gap: 40px;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 20px;
-  height: 210px;
-  width: 10px;
-
-  & .dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: 1px solid #fff;
-    flex: 0 0 auto;
-  }
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: url('../assets/images/Arrow.svg') no-repeat center/cover;
+  width: 40px;
+  height: 40px;
 }
 
-.dot.active {
-  background-color: #fff;
-}
 
 @media screen and (max-width: 996px) {
   .hero {

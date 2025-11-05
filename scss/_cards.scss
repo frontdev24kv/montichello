@@ -7,7 +7,9 @@
     rgba(36, 204, 250, 1) 0%,
     rgba(60, 127, 212, 0.99) 100%
   );
-  height: 978px;
+  min-height: 978px;
+  height: 100%;
+  margin-bottom: 150px;
 }
 
 .title_2_white {
