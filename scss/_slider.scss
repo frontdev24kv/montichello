@@ -1,0 +1,167 @@
+// --------------------- Custom Classes ---------------------
+
+.screen .slider {
+  position: relative;
+
+  &__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    text-align: center;
+    color: #fff;
+    padding: 24px;
+    border-radius: 20px;
+  }
+
+  &-slide {
+    position: relative;
+    height: 680px;
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(rgb(93 100 106 / 41%), rgb(15 20 77 / 64%));
+    }
+    &__img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+.card__box {
+  position: relative; /* make sure this is set */
+}
+
+
+.card__box .slick-dots li button {
+  background-color: #ccc;
+  border-radius: 0; 
+}
+.card__box .slick-dots li.slick-active button {
+  background-color: #222;
+}
+.card__box .slick-dots {
+  position: absolute;
+  top: 50%;            
+  transform: translateY(-50%);
+  left: -30px;
+  display: flex;
+  flex-direction: column; 
+  gap: 10px;
+}
+
+/* position arrows under the slider */
+.card__box .slick-prev,
+.card__box .slick-next {
+  position: absolute;
+  bottom: -45px; /* distance below cards */
+  background: #222;
+  color: #fff;
+  border: none;
+  font-size: 16px;
+  padding: 10px 14px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* hover effect */
+.card__box .slick-prev:hover,
+.card__box .slick-next:hover {
+  background: #555;
+  transform: scale(1.1);
+}
+
+/* left and right alignment under slider */
+.card__box .slick-prev {
+  left: 40%;
+  font-size: 0;
+}
+
+.card__box .slick-next {
+  right: 40%;
+  font-size: 0;
+
+}
+.card__box .slick-arrow {
+  top: none;
+  bottom: 0;
+}
+
+// ------------------------- Default Classes ---------------------
+
+.slick-dots {
+  padding-left: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+  position: absolute;
+  bottom: 33px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  li {
+    &.slick-active {
+      button {
+        background-color: antiquewhite;
+      }
+    }
+  }
+
+  button {
+    font-size: 0;
+    background: #39575196;
+    border: 1px solid #ffddff;
+    width: 10px;
+    height: 10px;
+    padding: 0;
+    border-radius: 50%;
+    box-shadow: 0 0 6px 0px #4e6a6c;
+    cursor: pointer;
+  }
+}
+
+.slick-arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 3;
+  font-size: 0;
+  border: 1px solid #fff;
+  background: transparent;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+
+  &::before {
+    content: '<';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 30px;
+    color: #fff;
+  }
+}
+
+.slick-prev {
+  left: 30px;
+}
+
+.slick-next {
+  left: none;
+  right: 30px;
+
+  &::before {
+    content: '>';
+  }
+}

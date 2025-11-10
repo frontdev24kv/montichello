@@ -3,23 +3,38 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="./assets/favicon/favicon.ico"
+      type="image/x-icon"
+    />
     <title>Montichello</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
     <link
       rel="stylesheet"
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-    <link rel="stylesheet" href="./css/main.css" />
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
+   <link rel="stylesheet" href="./css/main.css" />
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
       crossorigin="anonymous"
+      defer
     ></script>
 
     <script
       type="text/javascript"
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+      defer
     ></script>
+   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
     <script src="./js/app.js" defer></script>
   </head>
   <body>
@@ -36,7 +51,7 @@
             </div>
             <nav class="nav">
               <ul class="nav__list">
-                <li><a href="#!" class="nav__link">ABOUT US</a></li>
+                <li><a href="#about" class="nav__link">ABOUT US</a></li>
                 <li><a href="#projects" class="nav__link">PROJECTS</a></li>
                 <li><a href="#news" class="nav__link">NEWS</a></li>
                 <li><a href="#contact" class="nav__link">CONTACT</a></li>
@@ -67,27 +82,48 @@
       </header>
       <main class="main">
         <section class="hero">
-          <div class="container">
-            
-            <div class="screen">
-              <div class="screen__item">
-
-                <h1 class="main__title">SIMPLE & MODERN</h1>
-                <p class="subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+          <div class="screen slider">
+            <div class="slider-slide">
+              <div class="slider__content sl-content">
+                <h2 class="sl-content__title main__title">SIMPLE & MODERN</h2>
+                <h4 class="sl-content__subtitle subtitle">
+                  WE MAKE THE WORLD BEAUTIFUL EVERYDAY
+                </h4>
               </div>
-              <div class="screen__item">
+              <img
+                src="./assets/images/screen/01_screen.webp"
+                alt
+                class="slider-slide__img"
+              />
+            </div>
 
-                <h1 class="main__title">First screen</h1>
-                <p class="subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+            <div class="slider-slide">
+              <div class="slider__content sl-content">
+                <h2 class="sl-content__title main__title">Clean & Creative</h2>
+                <h4 class="sl-content__subtitle subtitle">
+                  WE TAKE CARE ABOUT OUR CLIENTS
+                </h4>
               </div>
-              <div class="screen__item">
-
-                <h1 class="main__title">Second screen</h1>
-                <p class="subtitle">WE MAKE THE WORLD BEAUTIFUL EVERYDAY</p>
+              <img
+                src="./assets/images/screen/02_screen.webp"
+                alt
+                class="slider-slide__img"
+              />
+            </div>
+            <div class="slider-slide">
+              <div class="slider__content sl-content">
+                <h2 class="sl-content__title main__title">Fast & Flexible</h2>
+                <h4 class="sl-content__subtitle subtitle">
+                  WE BUILD IDEAS THAT INSPIRE CHANGE
+                </h4>
               </div>
+              <img
+                src="./assets/images/screen/03_screen.webp"
+                alt
+                class="slider-slide__img"
+              />
             </div>
           </div>
-         
           <a href="#projects" id="scroll-link" class="arrow_btn"></a>
         </section>
 
@@ -141,15 +177,8 @@
         <section class="cards" id="news">
           <div class="container">
             <h2 class="title_2_white">LATEST NEWS</h2>
-            <!-- <div class="card__box">
-              <div class="card__item">1</div>
-              <div class="card__item">2</div>
-              <div class="card__item">3</div>
-              <div class="card__item">4</div>
-              <div class="card__item">5</div>
-              <div class="card__item">6</div>
-            </div> -->
-            <div class="content__box">
+
+            <div class="card__box slider">
               <div class="card">
                 <img
                   src="./assets/images/web_p/card_1.webp"
@@ -220,24 +249,182 @@
                   </div>
                 </div>
               </div>
+              <div class="card">
+                <img
+                  src="./assets/images/web_p/card_2.webp"
+                  alt="card 2"
+                  class="card__image"
+                />
+                <h3 class="card__title">EFFECTIVE ADVERTISING POINTERS.</h3>
+                <p class="card__text">
+                  Having a home based business is a wonderful asset to your
+                  life...
+                </p>
+                <div class="card__bottom">
+                  <div class="card__bottom_photo">
+                    <img
+                      src="./assets/images/photos/photo_2.png"
+                      alt="photo 2"
+                    />
+                  </div>
+                  <div class="card__bottom_info">
+                    <div class="name">DOMINIC FREEMAN</div>
+                    <div class="data">13 Dec 2019</div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="card">
+                <img
+                  src="./assets/images/web_p/card_1.webp"
+                  alt="card 1"
+                  class="card__image"
+                />
+                <h3 class="card__title">
+                  SEE THE UNMATCHED BEAUTY OF THE GREAT.
+                </h3>
+                <p class="card__text">
+                  Free directories: directories are perfect for customers that
+                  are searching for...
+                </p>
+                <div class="card__bottom">
+                  <div class="card__bottom_photo">
+                    <img src="./assets/images/photos/photo_1.png" alt="photo" />
+                  </div>
+                  <div class="card__bottom_info">
+                    <div class="name">ALJA BRUN</div>
+                    <div class="data">20 Jan 2020</div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </section>
         <section class="gallery" id="gallery">
           <div class="container">
             <h2 class="title_2">GALLERY</h2>
-            <div class="gallery__grid">
-              <img class="grid-item grid-item__col_2 grid-item__row_2" src="./assets/images/web_p/gallery/image_1.webp" alt="image 1">
-              <img class="grid-item" src="./assets/images/web_p/gallery/image_2.webp" alt="image 2">
-              <img class="grid-item" src="./assets/images/web_p/gallery/image_3.webp" alt="image 3">
-              <img class="grid-item" src="./assets/images/web_p/gallery/image_4.webp" alt="image 4">
-              <img class="grid-item" src="./assets/images/web_p/gallery/image_5.webp" alt="image 5">
-            </div>
+
+<div class="gallery__grid">
+  <a href="assets/images/web_p/gallery/image_1.webp" class="grid-item glightbox" data-gallery="mygallery" data-title="Image 1">
+    <img src="assets/images/web_p/gallery/image_1.webp" alt="">
+  </a>
+
+  <a href="assets/images/web_p/gallery/image_2.webp" class="grid-item glightbox" data-gallery="mygallery" data-title="Image 2">
+    <img src="assets/images/web_p/gallery/image_2.webp" alt="">
+  </a>
+
+  <a href="assets/images/web_p/gallery/image_3.webp" class="grid-item glightbox" data-gallery="mygallery" data-title="Image 3">
+    <img src="assets/images/web_p/gallery/image_3.webp" alt="">
+  </a>
+
+  <a href="assets/images/web_p/gallery/image_4.webp" class="grid-item glightbox" data-gallery="mygallery" data-title="Image 4">
+    <img src="assets/images/web_p/gallery/image_4.webp" alt="">
+  </a>
+
+  <a href="assets/images/web_p/gallery/image_5.webp" class="grid-item glightbox" data-gallery="mygallery" data-title="Image 5">
+    <img src="assets/images/web_p/gallery/image_5.webp" alt="">
+  </a>
+</div>
+
+
+            ]
+
             <button class="more_btn">SEE MORE</button>
           </div>
         </section>
+        <section class="map" id="map">
+          
+        </section>
       </main>
       <footer class="footer" id="footer">
+        <div class="container">
+          <div class="contact" id="contact">
+          <h2 class="title_2 mb_42">GET IN TOUCH</h2>
+          <div class="content__box">
+            <div class="contact__info">
+              <ul class="info__list">
+                <li class="info__list_item">
+                  <i
+                    class="fa-solid fa-location-dot"
+                    style="color: #7e5aff"
+                  ></i
+                  >91 Nolan Extensions Suite 670
+                </li>
+                <li class="info__list_item">
+                  <i class="fa-solid fa-phone" style="color: #7e5aff"></i>+001
+                  356-868-2454
+                </li>
+                <li class="info__list_item">
+                  <i class="fa-solid fa-inbox" style="color: #7e5aff"></i
+                  >montichello@service.com
+                </li>
+                <li class="info__list_item">
+                  <i class="fa-solid fa-clock" style="color: #7e5aff"></i>From
+                  07:05AM to 19:30PM
+                </li>
+              </ul>
+            </div>
+
+            <form action="" class="contact__form">
+              <div class="form_block">
+                <label class="form_label" for="name"></label>
+                <input
+                  class="form_input"
+                  type="text"
+                  id="name"
+                  placeholder="Name"
+                  required
+                />
+              </div>
+              <div class="form_block">
+                <label class="form_label" for="email"></label>
+                <input
+                  class="form_input"
+                  type="email"
+                  id="email"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+              <div class="form_block self_item">
+                <button class="more_btn">SUBMIT</button>
+              </div>
+            </form>
+          </div>
+        </div>
+          <div class="footer__wrapper">
+            <div class="left">
+              <div class="logo">
+                <img
+                  src="./assets/images/company_logo.svg"
+                  alt="company logo"
+                  class="logo__image"
+                />
+              </div>
+              <p class="copyrights">Copyrights © 2020 Montichello</p>
+            </div>
+
+            <div class="socials">
+              <a href="#!" class="socials__link">
+                <svg class="icon">
+                  <use href="assets/images/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+
+              <a href="#!" class="socials__link">
+                <svg class="icon">
+                  <use href="assets/images/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+
+              <a href="#!" class="socials__link">
+                <svg class="icon">
+                  <use href="assets/images/sprite.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </footer>
     </div>
   </body>

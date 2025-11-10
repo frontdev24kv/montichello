@@ -1,0 +1,39 @@
+@use 'vars' as v;
+@use 'mixin' as m;
+
+.footer {
+  position: relative;
+  width: 100%;
+  padding-top: 203px;
+  padding-bottom: 234px;
+  background: linear-gradient(
+    207deg,
+    rgba(126, 90, 255, 1) 0%,
+    rgba(85, 183, 255, 0.99) 100%
+  );
+
+  &__wrapper {
+    position: relative;
+    @include m.flex(center, center);
+    gap: 370px;
+    padding: 0 15px;
+  }
+}
+
+.copyrights {
+  font-size: 14px;
+  margin-top: 41px;
+}
+
+@media screen and (max-width: 890px) {
+  .footer {
+    padding: 60px 0;
+    &__wrapper {
+      flex-direction: column-reverse;
+      gap: 50px;
+    }
+  }
+  .copyrights {
+    text-align: center;
+  }
+}

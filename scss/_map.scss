@@ -1,0 +1,11 @@
+@use 'vars' as v;
+@use 'mixin' as m;
+
+.map {
+  width: 100%;
+  height: 700px;
+  margin: 0 auto;
+  // background: url('/assets/images/Map.png') no-repeat center / cover;
+  position: relative;
+  // z-index: -1;
+}

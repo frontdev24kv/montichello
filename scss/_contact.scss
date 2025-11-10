@@ -1,0 +1,78 @@
+@use 'vars' as v;
+@use 'mixin' as m;
+
+.content__box {
+  @include m.flex(start, start);
+  gap: 54px;
+}
+
+.contact {
+  color: black;
+  background-color: #fff;
+  padding: 90px 60px;
+  max-width: 770px;
+  width: 100%;
+  position: absolute;
+  left: 50%;
+  top: -300px;
+  bottom: 400px;
+  transform: translateX(-50%);
+  z-index: 999;
+
+  &__form {
+    @include m.flex(space-between, end);
+    flex-direction: column;
+    gap: 30px;
+  }
+}
+
+.info__list {
+  @include m.flex(start, start);
+  flex-direction: column;
+  gap: 25px;
+}
+
+.info__list_item {
+  line-height: 1.56;
+  white-space: nowrap;
+  & i {
+    margin-right: 10px;
+  }
+}
+
+.form_input {
+  width: 310px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(44, 64, 88, 0.2);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #000;
+}
+
+.form_input:focus {
+  border-bottom: 1px solid v.$main-color;
+}
+
+.mb_42 {
+  margin-bottom: 42px;
+}
+
+@media screen and (max-width: 890px) {
+  .contact {
+    padding: 40px;
+    height: 100%;
+    // max-height: 400px;
+  }
+
+  .content__box {
+    flex-direction: column-reverse;
+  }
+  .contact__form {
+    @include m.flex();
+    width: 100%;
+  }
+  .contact__info {
+    visibility: hidden;
+  }
+}

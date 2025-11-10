@@ -10,6 +10,7 @@
   min-height: 978px;
   height: 100%;
   margin-bottom: 150px;
+  position: relative;
 }
 
 .title_2_white {
@@ -32,11 +33,18 @@
   }
 }
 
+.card__box {
+  background-color: inherit;
+}
+
 .card {
   background-color: #fff;
   color: v.$main-color;
   max-height: 514px;
   padding-bottom: 30px;
+  margin-right: 20px;
+  position: relative;
+  max-width: 400px;
   &__image {
     height: 100%;
     max-height: 240px;
