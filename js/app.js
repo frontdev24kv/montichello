@@ -14,9 +14,9 @@ $('.card__box.slider').slick({
   infinite: true, // infinite loop
   speed: 500, // animation speed
   slidesToShow: 3, // how many slides visible at once
-  slidesToScroll: 3, // how many slides to scroll per move
+  slidesToScroll: 1, // how many slides to scroll per move
   autoplay: true, // enables auto play
-  autoplaySpeed: 2000, // delay between slides
+  autoplaySpeed: 4000, // delay between slides
   arrows: true,
   adaptiveHeight: true,
   responsive: [
@@ -24,7 +24,7 @@ $('.card__box.slider').slick({
       breakpoint: 992,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2,
+        slidesToScroll: 1,
         arrows: false
 
       }
