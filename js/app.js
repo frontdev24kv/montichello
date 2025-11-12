@@ -1,5 +1,20 @@
 'use strict';
 
+// ------- smooth scroll --------------------
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener("click", function (e) {
+    e.preventDefault();
+
+    const target = document.querySelector(this.getAttribute("href"));
+    if (target) {
+      target.scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+  });
+});
+
+
 // -------------------- burger -----------------------------
 
 const burger = document.querySelector('.burger');
@@ -14,13 +29,13 @@ if (burger && nav) {
     burger.setAttribute('aria-expanded', String(isOpen));
 
     // optional: prevent page scrolling when menu open
-    if (nav.classList.contains('active')) {
-      document.documentElement.style.overflow = 'hidden';
-      document.body.style.overflow = 'hidden';
-    } else {
-      document.documentElement.style.overflow = '';
-      document.body.style.overflow = '';
-    }
+    // if (nav.classList.contains('active')) {
+    //   document.documentElement.style.overflow = 'hidden';
+    //   document.body.style.overflow = 'hidden';
+    // } else {
+    //   document.documentElement.style.overflow = '';
+    //   document.body.style.overflow = '';
+    // }
   });
 }
 
@@ -34,6 +49,9 @@ const addMoreContent = () => {
 };
 
 moreDetailsBtn.addEventListener('click', addMoreContent);
+moreDetailsBtn2.addEventListener('click', () => {
+  alert('This feature is under development.')
+});
 
 // ----------------------------------------------------
 
@@ -67,7 +85,7 @@ $('.card__box.slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
         dots: true,
-        arrows: true
+        arrows: false
       }
     }
   ]

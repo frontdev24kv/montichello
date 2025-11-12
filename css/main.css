@@ -270,7 +270,7 @@ input[type=file] {
   left: 0;
   right: 0;
   top: 33px;
-  z-index: 9;
+  z-index: 1;
 }
 .header__wrapper {
   padding-top: 20px;
@@ -457,11 +457,7 @@ input[type=file] {
   background: url("../assets/images/Arrow.svg") no-repeat;
   width: 40px;
   height: 40px;
-}
-
-#more_details {
-  opacity: 0.5;
-  cursor: not-allowed;
+  z-index: 1;
 }
 
 @media screen and (max-width: 996px) {
@@ -578,6 +574,13 @@ input[type=file] {
 }
 .more_btn:hover {
   transform: scale(1.1);
+}
+
+.more_btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important; /* disable hover scale */
+  pointer-events: none; /* prevent hover/active */
 }
 
 .coords {
@@ -699,6 +702,7 @@ input[type=file] {
   margin-right: 20px;
   position: relative;
   max-width: 400px;
+  height: 514px;
 }
 .card__image {
   height: 100%;
@@ -995,10 +999,6 @@ input[type=file] {
 }
 html, body {
   overflow-x: hidden;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {

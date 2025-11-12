@@ -88,6 +88,13 @@
   }
 }
 
+.more_btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none !important; /* disable hover scale */
+  pointer-events: none; /* prevent hover/active */
+}
+
 .coords {
   font-family: v.$third-family;
   font-style: italic;
