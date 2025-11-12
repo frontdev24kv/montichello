@@ -58,6 +58,19 @@
   margin-bottom: 42px;
 }
 
+.error {
+  color: red;
+  font-size: 0.8em;
+  margin-top: 4px;
+  display: block;
+}
+
+.form_input.error {
+  border-color: red;
+  outline: none;
+}
+
+
 @media screen and (max-width: 890px) {
   .contact {
     padding: 40px;

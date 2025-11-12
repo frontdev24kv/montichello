@@ -18,9 +18,15 @@
       type="text/css"
       href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
     />
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css">
-   <link rel="stylesheet" href="./css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    />
+    <link rel="stylesheet" href="./css/main.css" />
     <script
       src="https://code.jquery.com/jquery-3.7.1.js"
       integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
@@ -33,8 +39,14 @@
       src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
       defer
     ></script>
-   <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js" defer></script>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" defer></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"
+      defer
+    ></script>
+    <script
+      src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+      defer
+    ></script>
     <script src="./js/app.js" defer></script>
   </head>
   <body>
@@ -49,6 +61,8 @@
                 class="logo__image"
               />
             </div>
+            <span class="burger"></span>
+
             <nav class="nav">
               <ul class="nav__list">
                 <li><a href="#about" class="nav__link">ABOUT US</a></li>
@@ -76,7 +90,6 @@
                 </svg>
               </a>
             </div>
-            <span class="burger"></span>
           </div>
         </div>
       </header>
@@ -147,7 +160,9 @@
                     having the right frame of mind. The truth is, our thoughts
                     are very powerful.
                   </p>
-                  <button class="more_btn">MORE DETAILS</button>
+                  <button class="more_btn" id="more_details_2">
+                    MORE DETAILS
+                  </button>
                   <p class="coords">New York City, United States - 1776 feet</p>
                 </div>
               </div>
@@ -162,12 +177,14 @@
                 <div class="description">
                   <h3 class="title_3">INTERNATIONAL</h3>
                   <h2 class="desc_title">COMMERCE CENTRE</h2>
-                  <p class="text">
+                  <p class="text" id="text">
                     Successful businesses have many things in common, today
                     we’ll look at the big ‘R’ of recognition and how a digital
                     advertising network may help.
                   </p>
-                  <button class="more_btn" id="more_btn">MORE DETAILS</button>
+                  <button class="more_btn" id="more_details">
+                    MORE DETAILS
+                  </button>
                   <p class="coords">Hong Kong - 1588 feet</p>
                 </div>
               </div>
@@ -304,68 +321,108 @@
           <div class="container">
             <h2 class="title_2">GALLERY</h2>
 
-<div class="gallery__grid">
-  <a href="assets/images/web_p/gallery/image_1.webp" class="grid-item glightbox" data-gallery="mygallery" data-title="Image 1">
-    <img src="assets/images/web_p/gallery/image_1.webp" alt="">
-  </a>
+            <div class="gallery__grid">
+              <a
+                href="assets/images/web_p/gallery/image_1.webp"
+                class="grid-item glightbox"
+                data-gallery="mygallery"
+                data-title="Image 1"
+              >
+                <img src="assets/images/web_p/gallery/image_1.webp" alt="" />
+              </a>
 
-  <a href="assets/images/web_p/gallery/image_2.webp" class="grid-item glightbox" data-gallery="mygallery" data-title="Image 2">
-    <img src="assets/images/web_p/gallery/image_2.webp" alt="">
-  </a>
+              <a
+                href="assets/images/web_p/gallery/image_2.webp"
+                class="grid-item glightbox"
+                data-gallery="mygallery"
+                data-title="Image 2"
+              >
+                <img src="assets/images/web_p/gallery/image_2.webp" alt="" />
+              </a>
 
-  <a href="assets/images/web_p/gallery/image_3.webp" class="grid-item glightbox" data-gallery="mygallery" data-title="Image 3">
-    <img src="assets/images/web_p/gallery/image_3.webp" alt="">
-  </a>
+              <a
+                href="assets/images/web_p/gallery/image_3.webp"
+                class="grid-item glightbox"
+                data-gallery="mygallery"
+                data-title="Image 3"
+              >
+                <img src="assets/images/web_p/gallery/image_3.webp" alt="" />
+              </a>
 
-  <a href="assets/images/web_p/gallery/image_4.webp" class="grid-item glightbox" data-gallery="mygallery" data-title="Image 4">
-    <img src="assets/images/web_p/gallery/image_4.webp" alt="">
-  </a>
+              <a
+                href="assets/images/web_p/gallery/image_4.webp"
+                class="grid-item glightbox"
+                data-gallery="mygallery"
+                data-title="Image 4"
+              >
+                <img src="assets/images/web_p/gallery/image_4.webp" alt="" />
+              </a>
 
-  <a href="assets/images/web_p/gallery/image_5.webp" class="grid-item glightbox" data-gallery="mygallery" data-title="Image 5">
-    <img src="assets/images/web_p/gallery/image_5.webp" alt="">
-  </a>
-</div>
+              <a
+                href="assets/images/web_p/gallery/image_5.webp"
+                class="grid-item glightbox"
+                data-gallery="mygallery"
+                data-title="Image 5"
+              >
+                <img src="assets/images/web_p/gallery/image_5.webp" alt="" />
+              </a>
 
+              <a
+                href="assets/images/web_p/gallery/image_4.webp"
+                class="grid-item glightbox see-more hidden-img"
+                data-gallery="mygallery"
+                data-title="Image 4"
+              >
+                <img src="assets/images/web_p/gallery/image_4.webp" alt="" />
+              </a>
+
+              <a
+                href="assets/images/web_p/gallery/image_5.webp"
+                class="grid-item glightbox see-more hidden-img"
+                data-gallery="mygallery"
+                data-title="Image 5"
+              >
+                <img src="assets/images/web_p/gallery/image_5.webp" alt="" />
+              </a>
+            </div>
 
             ]
 
-            <button class="more_btn">SEE MORE</button>
+            <button class="more_btn" id="see-more-btn">SEE MORE</button>
           </div>
         </section>
-        <section class="map" id="map">
-          
-        </section>
+        <section class="map" id="map"></section>
       </main>
       <footer class="footer" id="footer">
         <div class="container">
           <div class="contact" id="contact">
-          <h2 class="title_2 mb_42">GET IN TOUCH</h2>
-          <div class="content__box">
-            <div class="contact__info">
-              <ul class="info__list">
-                <li class="info__list_item">
-                  <i
-                    class="fa-solid fa-location-dot"
-                    style="color: #7e5aff"
-                  ></i
-                  >91 Nolan Extensions Suite 670
-                </li>
-                <li class="info__list_item">
-                  <i class="fa-solid fa-phone" style="color: #7e5aff"></i>+001
-                  356-868-2454
-                </li>
-                <li class="info__list_item">
-                  <i class="fa-solid fa-inbox" style="color: #7e5aff"></i
-                  >montichello@service.com
-                </li>
-                <li class="info__list_item">
-                  <i class="fa-solid fa-clock" style="color: #7e5aff"></i>From
-                  07:05AM to 19:30PM
-                </li>
-              </ul>
-            </div>
+            <h2 class="title_2 mb_42">GET IN TOUCH</h2>
+            <div class="content__box">
+              <div class="contact__info">
+                <ul class="info__list">
+                  <li class="info__list_item">
+                    <i
+                      class="fa-solid fa-location-dot"
+                      style="color: #7e5aff"
+                    ></i
+                    >91 Nolan Extensions Suite 670
+                  </li>
+                  <li class="info__list_item">
+                    <i class="fa-solid fa-phone" style="color: #7e5aff"></i>+001
+                    356-868-2454
+                  </li>
+                  <li class="info__list_item">
+                    <i class="fa-solid fa-inbox" style="color: #7e5aff"></i
+                    >montichello@service.com
+                  </li>
+                  <li class="info__list_item">
+                    <i class="fa-solid fa-clock" style="color: #7e5aff"></i>From
+                    07:05AM to 19:30PM
+                  </li>
+                </ul>
+              </div>
 
-            <form action="" class="contact__form">
+              <!-- <form action="" class="contact__form">
               <div class="form_block">
                 <label class="form_label" for="name"></label>
                 <input
@@ -389,9 +446,36 @@
               <div class="form_block self_item">
                 <button class="more_btn">SUBMIT</button>
               </div>
-            </form>
+            </form> -->
+              <form action="" class="contact__form" novalidate>
+                <div class="form_block">
+                  <label class="form_label" for="name"></label>
+                  <input
+                    class="form_input"
+                    type="text"
+                    id="name"
+                    placeholder="Name"
+                  />
+                  <span class="error"></span>
+                </div>
+
+                <div class="form_block">
+                  <label class="form_label" for="email"></label>
+                  <input
+                    class="form_input"
+                    type="email"
+                    id="email"
+                    placeholder="Email"
+                  />
+                  <span class="error"></span>
+                </div>
+
+                <div class="form_block self_item">
+                  <button type="submit" class="more_btn">SUBMIT</button>
+                </div>
+              </form>
+            </div>
           </div>
-        </div>
           <div class="footer__wrapper">
             <div class="left">
               <div class="logo">
